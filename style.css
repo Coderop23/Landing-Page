@@ -1,0 +1,191 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* layout */
+
+.header {
+    color: white;
+    font-size: 4.5rem;
+    height: 100vh;
+    width: auto;
+}
+
+.header::before {
+    content: '';
+    background: url(Images/developer.png) no-repeat center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+
+}
+
+.container {
+    position: absolute;
+    top: 12%;
+    left: 18%;
+}
+
+.skills-container {
+    max-width: 80%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap: 3.25rem;
+    row-gap: 2rem;
+}
+
+.skills {
+    box-shadow: 2px 3px 5px gray;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: all 0.2s;
+}
+
+.skills:hover,
+.skills:focus {
+    transform: scale(1.05);
+}
+
+.skills figure img {
+    width: 100%;
+    display: block;
+}
+
+.skills-heading {
+    margin-top: 5px;
+    padding: 20px 30px;
+    text-transform: capitalize;
+}
+
+.skills-desc {
+    padding-inline: 30px;
+    padding-bottom: 50px;
+    text-align: justify;
+    line-height: 1.15;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.952);
+    padding: 30px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Utility classes */
+
+.intro {
+    margin-bottom: 10px;
+}
+
+.intro span {
+    font-size: 1.5rem;
+    padding-inline: 5px;
+}
+
+.job-title {
+    text-transform: uppercase;
+}
+
+.claim {
+    background-color: black;
+    color: white;
+    padding: 30px 80px;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+.claim span {
+    font-size: 1.5em;
+}
+
+.contact,
+.about {
+    padding: 50px 30px;
+    color: white;
+}
+
+.contact {
+    background-color: #515603;
+}
+
+.about {
+    background-color: #722300;
+}
+
+.info-heading {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.info-desc {
+    margin-bottom: 30px;
+    color: hsla(0, 0%, 91%, 0.863);
+}
+
+.about-desc,
+.email {
+    color: hsla(0, 0%, 91%, 0.863);
+}
+
+@media all and (max-width:550px) {
+
+    .contact,
+    .about {
+        padding: 10px 20px;
+    }
+
+    .intro,
+    .job-title {
+        font-size: 2rem;
+    }
+
+    .info{
+        grid-template-columns: 1fr;
+        row-gap: 0.1rem;
+    }
+
+}
+
+@media all and (max-width:345px) {
+
+    .contact,
+    .about {
+        padding: 10px 20px;
+    }
+
+    .intro,
+    .job-title {
+        font-size: 2rem;
+    }
+
+    .claim{
+        font-size:2rem;
+    }
+
+    .info{
+        grid-template-columns: 1fr;
+        row-gap:0.1rem;
+    }
+}
